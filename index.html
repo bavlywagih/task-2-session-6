@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer task 2 session 6 : 31-5-2025</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+
+        <div class="mode-buttons">
+            <div class="pomodoro-wrapper">
+                <button onclick="togglePomodoroInput()">Pomodoro</button>
+                <input type="number" id="customPomodoro" placeholder="Min" min="1" />
+            </div>
+            <button onclick="setMode('short')">Short Break</button>
+            <button onclick="setMode('long')">Long Break</button>
+        </div>
+
+        <div class="circle" onclick="toggleTimer()">
+            <svg width="200" height="200">
+                <circle cx="100" cy="100" r="90" stroke="#ddd" stroke-width="10" fill="none" />
+                <circle id="progress" cx="100" cy="100" r="90" stroke="#ea647a" stroke-width="10" fill="rgb(53 45 82)"
+                    stroke-linecap="round" />
+            </svg>
+            <div class="time" id="timer">25:00</div>
+            <div class="status" id="statusText">Paused</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
